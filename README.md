@@ -68,6 +68,7 @@
 <br>
 기숙사는 4개인데 만들어져있는 템플릿은 한개여서 사용자가 배정받은 기숙사에 따라 CSS를 변경해주어야 했습니다. 그래서 미리 각 기숙사에 맞는 알파벳을 붙여서 CSS class를 만들어 놓고 받아오는 기숙사정보에 따라서 적용하는 class의 이름이 바뀌도록 했습니다.
 <br>
+
 ```javascript
 // get data - sorting dormitory
 async function change_mydormitory() {
