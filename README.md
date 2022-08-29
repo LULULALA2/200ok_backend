@@ -57,10 +57,43 @@
 # 🧨TroubleShooting
 
 ### 1. 사용자가 배정받은 기숙사에 따라 CSS를 변경해야하는 문제
+<br>
+기숙사는 4개인데 만들어져있는 템플릿은 한개여서 사용자가 배정받은 기숙사에 따라 CSS를 변경해주어야 했습니다. 그래서 미리 각 기숙사에 맞는 알파벳을 붙여서 CSS class를 만들어 놓고 받아오는 기숙사정보에 따라서 적용하는 class의 이름이 바뀌도록 했습니다.
+
+```javascript
+// get data - sorting dormitory
+async function change_mydormitory() {
+
+    const response = await fetch(`${backend_base_url}/dorm/sorting/`, {
+        method: 'GET',
+        headers : { Authorization : "Bearer " + localStorage.getItem("access")},
+        withCredentials: true,
+    })
+    .then(response => response.json())
+    .then(data => {      
+        dormitory = ["gd", "hf", "sth", "rc"]
+        let room_id = data.dormitory_id - 1
+        
+        // dorm element
+        document.getElementById("mybg").classList.toggle(`${dormitory[room_id]}-bg`)
+        document.getElementById("mydorm1").innerText = `${data.dormitory}`
+		// .. 생략 ..
+
+        // student id card
+        admission = getYmd10(data.join_date)
+        student_id = admission.slice(2, 4) + String(data.dormitory_id).padStart(2,'0') + String(data.id).padStart(4,'0')
+
+		//.. 생략 ..
+        document.getElementById("admission").innerText= `${admission}`
+        // document.querySelector(".portrait").attr('style', 'background-image: url("' + image_url +'")')
+    })
+}
+```
 
 <br>
 
 # 🖋회고
+프로젝트 기간에 비해서 볼륨이 좀 컸던 것 같다. 그래서 서로 프로젝트에 집중하느라 팀 내 소통이 조금 부족했었다. 가장 큰 문제는 배포를 성공하지 못한 것이었는데, 마감 3일전부터 시작하면 충분히 할 수 있을 거라 생각했는데 배포가 생각보다 오래걸리고 고려해야될 변수가 많았다. 그래서 다음 프로젝트에서는 배포를 미리부터 준비하자는 의견이 나왔다. 그래도 그동안 다른 프로젝트에서는 해보지 못했던 EC2, S3 사용 같은 것도 해볼 수 있어서 좋았고, 멀티프로세싱이라는 새로운 기술도 접할 수 있어서 만족스러웠다. 이번에도 제작한 목업과 기획대로 잘 완성이 되었는데, 특히 프론트쪽은 목업보다 더 잘나와서 뿌듯했다.
 
 <br>
 
@@ -86,4 +119,4 @@
 # ✨Credit
 * Style Transfer pre-trained models : <a href="https://github.com/ycjing/Neural-Style-Transfer-Papers"><img src="https://img.shields.io/badge/Github-000000?style=flat-square&logo=github&logoColor=white"/></a>
 * 딥페이크 코드 :  <a href="https://github.com/AliaksandrSiarohin/first-order-model"><img src="https://img.shields.io/badge/Github-000000?style=flat-square&logo=github&logoColor=white"/></a>
-* 해리포터 모바일게임 "HOGWARTS MYSTERY" - 기숙사 배경* 
+* 해리포터 모바일게임 "HOGWARTS MYSTERY" - 기숙사 배경
