@@ -2,6 +2,14 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/104331479/187144287-5f11415c-eff6-4dfa-8ddd-fc704bc4eaa5.png"></p>
 <br>
 
+<br>**목차**
+<br>[1. 프로젝트 소개](#intro)
+<br>[2. 프로젝트 기획 - 시연영상](#프로젝트-기획)
+<br>[3. 맡은 역할](#-담당-역할)
+<br>[4. 트러블슈팅](#troubleshooting)
+<br>[5. 회고](#회고)
+<br>
+
 # 🧙‍♂️녹턴앨리 B-street 지하2층 불법 입학 센터 (200ok)
 해리포터 컨셉, 사람 사진을 초상화처럼 스타일을 변경하고 움직임을 추가해서 움직이는 초상화를 만들고 기숙사를 분류해주는 웹사이트
 
