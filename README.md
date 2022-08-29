@@ -37,6 +37,13 @@
 
 <br>
 
+### ✔ 담당 역할
+* 기숙사 배정 결과 페이지, 마이페이지, 로그인페이지 제작
+* 사용자 정보 표시, sns공유 및 클립보드 링크 복사 기능
+* AWS(EC2, Cloud9) 백엔드 배포
+
+<br>
+
 ### API
 <a href="https://typingmylife.notion.site/MakeMigrations-API-53526cc465344be98ab4e786e487414f">노션 페이지로 이동</a>
 
@@ -44,13 +51,6 @@
 
 ### ERD
 ![make migrations (6)](https://user-images.githubusercontent.com/104487608/185342143-bfb69da1-2719-4df0-bfa0-fd3353a82036.png)
-
-<br>
-
-### ✔ 담당 역할
-* 기숙사 배정 결과 페이지, 마이페이지, 로그인페이지 제작
-* 사용자 정보 표시, sns공유 및 클립보드 링크 복사 기능
-* AWS(EC2, Cloud9) 백엔드 배포
 
 <br>
 
