@@ -52,11 +52,6 @@
 
 <br>
 
-### API
-<a href="https://typingmylife.notion.site/MakeMigrations-API-53526cc465344be98ab4e786e487414f">노션 페이지로 이동</a>
-
-<br>
-
 ### ERD
 ![make migrations (6)](https://user-images.githubusercontent.com/104487608/185342143-bfb69da1-2719-4df0-bfa0-fd3353a82036.png)
 
